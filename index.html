@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Peta Belajar STIFIn</title>
+<meta name="description" content="Alat bantu pelajar mengenali gaya belajar berdasarkan kerangka lima mesin kecerdasan STIFIn.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="bar">
+  <span class="bar__nama">Peta Belajar STIFIn</span>
+  <button class="tautan" id="btn-riwayat" type="button">Riwayat</button>
+</header>
+
+<main>
+
+  <!-- ============ LAYAR 1: PEMBUKA ============ -->
+  <section class="layar layar--aktif" id="layar-intro">
+
+    <div class="hero">
+      <p class="hero__untuk">Untuk pelajar, anak-anak, dan wali kelas</p>
+      <h1 class="hero__judul">Cara otakmu belajar<br>bukan cara semua orang belajar.</h1>
+      <p class="hero__isi">
+        Pilih dulu jalur yang paling pas, lalu jawab beberapa pertanyaan singkat untuk
+        memetakan kecenderungan belajar ke dalam lima mesin kecerdasan STIFIn.
+      </p>
+    </div>
+
+    <div class="pilihan-usia">
+      <button class="kartu-usia" id="btn-jalur-anak" type="button" style="--w:#17806A">
+        <span class="kartu-usia__emoji">🎨</span>
+        <span class="kartu-usia__judul">Anak-anak</span>
+        <span class="kartu-usia__isi">Soal berupa warna, gambar, dan pilihan seru — tanpa istilah rumit.</span>
+        <span class="kartu-usia__meta">± 3 menit · 13 soal</span>
+      </button>
+      <button class="kartu-usia" id="btn-jalur-dewasa" type="button" style="--w:#2B58B8">
+        <span class="kartu-usia__emoji">🎓</span>
+        <span class="kartu-usia__judul">SMP / SMA / SMK</span>
+        <span class="kartu-usia__isi">Soal berbasis teks, hasilnya dilengkapi arah jurusan yang mungkin cocok.</span>
+        <span class="kartu-usia__meta">± 4 menit · 20 soal</span>
+      </button>
+    </div>
+
+    <!-- Poros otak: struktur ini mengikuti letak setiap mesin, bukan hiasan -->
+    <div class="poros" aria-label="Letak lima mesin kecerdasan">
+      <div class="poros__sisi">
+        <span class="poros__label">Belahan kiri</span>
+        <div class="poros__pasang" id="poros-kiri"></div>
+      </div>
+      <div class="poros__tengah">
+        <span class="poros__label">Otak tengah</span>
+        <div class="poros__pasang" id="poros-tengah"></div>
+      </div>
+      <div class="poros__sisi">
+        <span class="poros__label">Belahan kanan</span>
+        <div class="poros__pasang" id="poros-kanan"></div>
+      </div>
+    </div>
+
+    <aside class="catatan">
+      <h2 class="catatan__judul">Baca ini dulu</h2>
+      <p>
+        Tes STIFIn yang resmi dilakukan lewat pemindaian sidik jari oleh promotor
+        bersertifikat. Alat ini bukan penggantinya. Yang dipakai di sini adalah
+        kuesioner mandiri, jadi hasilnya berupa <em>dugaan kecenderungan</em> —
+        berguna sebagai bahan refleksi, titik awal diskusi arah jurusan, dan
+        penyusun strategi belajar. Bukan untuk menghakimi bakat secara final
+        atau menilai orang lain.
+      </p>
+    </aside>
+  </section>
+
+  <!-- ============ LAYAR 2: KUIS ============ -->
+  <section class="layar" id="layar-kuis" aria-live="polite">
+    <div class="kuis">
+      <div class="kemajuan">
+        <div class="kemajuan__jalur"><div class="kemajuan__isi" id="kemajuan-isi"></div></div>
+        <span class="kemajuan__angka" id="kemajuan-angka"></span>
+      </div>
+
+      <p class="kuis__bagian" id="kuis-bagian"></p>
+      <h2 class="kuis__soal" id="kuis-soal"></h2>
+      <div class="pilihan" id="kuis-pilihan"></div>
+
+      <button class="tautan" id="btn-mundur" type="button">Kembali ke soal sebelumnya</button>
+    </div>
+  </section>
+
+  <!-- ============ LAYAR 3: HASIL ============ -->
+  <section class="layar" id="layar-hasil">
+    <div class="hasil" id="hasil-isi"></div>
+  </section>
+
+  <!-- ============ LAYAR 4: RIWAYAT ============ -->
+  <section class="layar" id="layar-riwayat">
+    <div class="riwayat">
+      <h2 class="riwayat__judul">Riwayat pemetaan</h2>
+      <div id="riwayat-isi"></div>
+      <div class="riwayat__aksi">
+        <button class="tombol tombol--utama" id="btn-riwayat-tutup" type="button">Tutup</button>
+        <button class="tautan tautan--bahaya" id="btn-riwayat-hapus" type="button">Hapus semua riwayat</button>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="kaki">
+  <p>Proyek pelajar untuk .id DeveloperDay 2026 · kerangka STIFIn oleh Farid Poniman</p>
+</footer>
+
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
